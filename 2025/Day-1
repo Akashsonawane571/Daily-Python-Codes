@@ -1,0 +1,16 @@
+# Day01_Fibonacci_Memoization.py
+# Fibonacci Series using Memoization (Dynamic Programming)
+
+def fibonacci(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+    return memo[n]
+
+if __name__ == "__main__":
+    num = int(input("Enter number of terms: "))
+    print(f"Fibonacci sequence up to {num} terms:")
+    for i in range(num):
+        print(fibonacci(i), end=" ")
