@@ -6,10 +6,10 @@ import argparse
 def add(x, y): return x + y
 def sub(x, y): return x - y
 def mul(x, y): return x * y
-def div(x, y): return x / y if y != 0 else "❌ Division by zero!"
+def div(x, y): return x / y if y != 0 else " Division by zero!"
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="🧮 Simple CLI Calculator")
+    parser = argparse.ArgumentParser(description=" Simple CLI Calculator")
     
     parser.add_argument("operation", choices=["add", "sub", "mul", "div"],
                         help="Operation to perform")
@@ -27,4 +27,4 @@ if __name__ == "__main__":
     elif args.operation == "div":
         result = div(args.x, args.y)
 
-    print(f"✅ Result: {result}")
+    print(f" Result: {result}")
